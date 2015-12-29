@@ -56,6 +56,7 @@ class BartenderController
   private
 
   def set_movement_variables
+    return unless @full_rotation_steps && @available_positions
     @position_steps = @full_rotation_steps / @available_positions
   end
 
