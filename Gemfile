@@ -11,6 +11,8 @@ gem 'jquery-rails'
 
 gem 'bootstrap-sass', '~> 3.3.6'
 
+gem 'pi_piper', git: 'https://github.com/fattymiller/pi_piper.git', branch: 'develop'
+
 group :development, :test do
   gem 'pry'
   gem 'pry-byebug'
