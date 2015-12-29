@@ -3,7 +3,7 @@ require 'pi_piper'
 class BartenderController
   include Singleton
 
-  attr_reader :current_step, :current_position
+  attr_reader :current_step, :current_position, :available_positions
 
   def initialize
     @calibrated = false
@@ -64,7 +64,7 @@ class BartenderController
     @registered_pins ||= []
   end
   def registered_pin_numbers
-    @registered_pins.map { |pin| pin.pin }
+    registered_pins.map { |pin| pin.pin }
   end
   def pin_registered?(pin_number)
     registered_pin_numbers.include?(pin_number)

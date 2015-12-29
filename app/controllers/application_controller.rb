@@ -5,4 +5,11 @@ class ApplicationController < ActionController::Base
 
   def dashboard
   end
+
+  def control_position
+    position = params[:position]
+    BartenderController.instance.spin_to_position! position.to_i
+
+    redirect_to :back
+  end
 end

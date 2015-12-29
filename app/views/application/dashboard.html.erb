@@ -1,3 +1,9 @@
 <div class="jumbotron text-center">
   <h1>DIY Bartender</h1>
 </div>
+
+<div class="text-center">
+  <% BartenderController.instance.available_positions.times do |number| %>
+    <%= link_to "Spin to position ##{number}", control_position_path(number), method: :post, class: 'btn btn-xs btn-default span2' %>
+  <% end %>
+</div>
