@@ -125,7 +125,7 @@ class BartenderController
       io == 1 ? @motor_pins[index].on : @motor_pins[index].off
     end
 
-    sleep 0.001
+    sleep 0.002
 
     nil
   end
